@@ -22,7 +22,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', 'ibrahimah') {
+        docker.withRegistry('https://registry.hub.docker.com', 'ibdockerhub') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
