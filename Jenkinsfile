@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("ibrahimah/argocd-test")
+       app = docker.build("ibdockerhub/argocd-test")
     }
 
     stage('Test image') {
