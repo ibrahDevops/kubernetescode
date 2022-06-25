@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("ibdockerhub/argocd-test")
+       app = docker.build("ibrahimah/argocd-test")
     }
 
     stage('Test image') {
@@ -22,7 +22,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', 'ibdockerhub') {
+        docker.withRegistry('https://registry.hub.docker.com', 'ibrahimah') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
